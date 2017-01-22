@@ -61,7 +61,7 @@
 			</div><!-- widget - area -->
 			</div><!-- box-inner -->
 		</div><!-- end -->
-		
+
 		</div><!-- container -->
 	</footer><!-- #colophon -->
 		<div class="sub-footer">
@@ -98,7 +98,7 @@ jQuery(document).ready(function() {
   });
 </script>
 <script>
-$("#homebtn, #shopbtn").click(function() {
+$("#homebtn, #shopbtn, a[href="#voucherid"]").click(function() {
     $('html, body').animate({
         scrollTop: $("#voucherid").offset().top
     }, 500);
