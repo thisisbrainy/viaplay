@@ -301,7 +301,7 @@ header#masthead {
 }
 div#primary {
     overflow: hidden;
-} 
+}
 .main {
 -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -438,7 +438,7 @@ input {
     width: 100%;
     background:none;
     outline:none!Important;
-    
+
     color:#1b1b1b;
 }
 .checkout.flexing {
@@ -453,7 +453,7 @@ input {
 
 .checkbox-custom {
     opacity: 0;
-    position: absolute;   
+    position: absolute;
 }
 
 .checkbox-custom, .checkbox-custom-label {
@@ -562,7 +562,7 @@ div#primary.regular-page p {
 div#primary.regular-page a {
 	color:#FC363B;
 	text-decoration:none;
-	
+
 }
 div#primary.regular-page {
     background: #f9f9f9;
@@ -785,62 +785,62 @@ span.ion-android-close {
 	padding-top:20px;
 }
  /* front color */
- 
+
  .tabs {
    margin-top: 0;
  }
- 
+
  .main.video-main {
    transform: scale(1);
    height: auto;
    min-height: 0;
  }
- 
+
  #thumbnail {
    transform: scale(1.1);
  }
- 
+
  .tabs #text {
    margin-top: -270px;
  }
- 
+
  .cta {
    text-align: center;
  }
- 
+
  .shop-head {
    background: #6c6;
    padding: 100px 20px;
    margin-top: -20px;
    text-align: center;
  }
- 
+
  .shop-head h3 {
    color: #fff;
    width: 80%;
    font-size: 1.875em;
    margin: 0 auto;
  }
- 
+
  #shop {
    background: #f9f9f9;
  }
  /* products */
- 
+
  .product-box {
    text-align: center;
  }
- 
+
  .info {
    background: #fff;
  }
- 
+
  .info img {
    padding-top: 28px;
    max-width: 36px;
    display: inline-block;
  }
- 
+
  .info {
    background: #fff;
    border: 1px solid rgba(188, 190, 192, 0.25);
@@ -848,23 +848,23 @@ span.ion-android-close {
    -webkit-transition: all .3s linear;
    -ms-transition: all .3s linear;
  }
- 
+
  .vouchers.flexing {
    margin: 0 -3%;
  }
- 
+
  .flex.product-box {
    margin: 0px 3%;
  }
- 
+
  .product-box:hover .info {
    background: #1B1B1B;
  }
- 
+
  .product-box:hover .info h4 {
    color: #fff;
  }
- 
+
  .info h4 {
    color: #1B1B1B;
    font-size: 1.438em;
@@ -877,7 +877,7 @@ span.ion-android-close {
    -webkit-transition: all .3s linear;
    -ms-transition: all .3s linear;
  }
- 
+
  .package-wrap {
    border-bottom: 1px solid rgba(18a/* front color */
    .tabs {
@@ -984,7 +984,7 @@ span.ion-android-close {
      width: 85%;
      margin-bottom: 30px;
    }
-   
+
    /* guide */
    .guide h3 {
      color: #231F20;
@@ -1080,7 +1080,7 @@ span.ion-android-close {
    }
    8, 190, 192, 0.25);
  }
- 
+
   .info h5 {
      margin: 0;
      line-height: 1.5;
@@ -1095,36 +1095,36 @@ span.ion-android-close {
    width: 85%;
    margin: 0 auto;
  }
- 
+
  .valid p {
    font-size: 1.250em;
    color: #636363;
    font-weight: 300;
    margin: 0;
  }
- 
+
  .title h3 {
    color: #231F20;
    font-size: 1.875em;
    font-weight: 600;
    margin: 52px 0;
  }
- 
+
  .title {
    text-align: center;
  }
- 
+
  .shop-module button {
    margin-top: 30px;
    width: 85%;
    margin-bottom: 30px;
  }
- 
+
  .vouchers {
    padding-bottom: 30px;
  }
  /* guide */
- 
+
  .guide h3 {
    color: #231F20;
    font-size: 1.875em;
@@ -1133,21 +1133,21 @@ span.ion-android-close {
    margin: 0;
    margin-top: 64px;
  }
- 
+
  .guide {
    background: #fff;
  }
- 
+
  .guide-title {
    text-align: center;
  }
- 
+
  .step span {
    color: #636363;
    font-size: 1.250em;
    font-weight: 300;
  }
- 
+
  .step {
    padding: 20px 0;
    border-top: 1px solid rgba(188, 190, 192, 0.25);
@@ -1155,16 +1155,16 @@ span.ion-android-close {
    -webkit-transition: all .3s linear;
    -ms-transition: all .3s linear;
  }
- 
+
  .step:last-of-type {
    border-bottom: 1px solid rgba(188, 190, 192, 0.25);
  }
- 
+
  .guide-inner {
    padding: 0 17px;
    padding-bottom: 64px;
  }
- 
+
  span.num {
    border: 1px solid #636363;
    border-radius: 100px;
@@ -1176,44 +1176,44 @@ span.ion-android-close {
    position: relative;
    margin: 0 22px 0 15px;
  }
- 
+
  .step a {
    text-decoration: none;
    color: #FC363B;
  }
- 
+
  .step:hover span {
    color: #fff;
  }
- 
+
  .step:hover {
    background: #1B1B1B;
  }
  /* payments */
- 
+
  .payment {
    text-align: center;
  }
- 
+
  .payments {
    width: 45%;
    margin: 0 auto;
  }
- 
+
  .payments img {
    max-width: 80px;
  }
- 
+
  .title p {
    font-size: 1.438em;
    color: #1b1b1b;
    margin: 0 auto;
  }
- 
+
  .payment .title h3 {
    margin-bottom: 20px;
  }
- 
+
  .title p {
    font-size: 1.438em;
    color: #1b1b1b;
@@ -1221,18 +1221,18 @@ span.ion-android-close {
    line-height: 1.2;
    margin-bottom: 60px;
  }
- 
+
  .payments {
    width: 45%;
    margin: 0 auto;
    padding-bottom: 64px;
  }
- 
+
  .cta {
    text-align: center;
    padding: 32px 0 34px 0;
  }
- 
+
  .cta h3 {
    font-size: 1.875em;
  }
@@ -1245,10 +1245,6 @@ nav#site-navigation {
     text-align: center;
     width: 100%;
     left: 0;
-}
-
-.logged-in nav#site-navigation {
-    margin-top: 32px;
 }
 
 #primary-menu .menu-item a {
@@ -1316,7 +1312,7 @@ button.gray:hover {
 	        flex:1;
 	padding-bottom:75px;
 }
-h1.widgettitle, 
+h1.widgettitle,
 h2.widgettitle {
     font-size:1em;
     font-weight: 500;
@@ -1374,7 +1370,7 @@ h2.widgettitle {
 }
 @media (max-width: 1450px) {
  body {
-	font-size:0.82em; 
+	font-size:0.82em;
 	}
 	h4 {
     margin: 25px 0;
@@ -1535,7 +1531,7 @@ h1.widgettitle, h2.widgettitle {
     width: 60px;
         font-size: 50px;
 }
-#back-top { 
+#back-top {
 	display:none;
 }
 }
