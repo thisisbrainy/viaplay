@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
 	Template name: Home
 */
 get_header(); ?>
@@ -58,56 +58,26 @@ get_header(); ?>
 							<h3>Basic package</h3>
 						</div>
 					<div class="vouchers flexing">
+
+						<?php	if($via_products->have_posts()): while($via_products->have_posts()): $via_products->the_post(); $via_prod = wc_get_product(get_the_ID()); ?>
+
 						<div class="flex product-box">
 							<div class="info">
 								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
-								<h4>Proovi 2 kuud põhipaketti</h4>
-								<h5>TASUTA</h5>
+								<h4><?php the_title(); ?></h4>
+								<h5><?php if($via_prod->get_price() == 0): echo __('TASUTA'); else: echo $via_prod->get_price(); endif; ?></h5>
 								<div class="valid">
-									<p>Kehtib kuni: 01.05.2017</p>
+									<p>Kehtib kuni: <?php echo get_post_meta(get_the_ID(), '_product_attributes')[0]['kehtib-kuni']['value']; ?></p>
 								</div>
 							</div>
-							<a href="#" target="_blank"><button>Osta Kupong</button></a>
+							<a href="<?php echo home_url('/checkout/'); ?>?add-to-cart=<?php echo get_the_ID(); ?>"><button>Osta Kupong</button></a>
 						</div><!-- .flex -->
-						
-						<div class="flex product-box">
-							<div class="info">
-								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
-								<h4>Proovi 2 kuud põhipaketti</h4>
-								<h5>TASUTA</h5>
-								<div class="valid">
-									<p>Kehtib kuni: 01.05.2017</p>
-								</div>
-							</div>
-							<a href="#" target="_blank"><button>Osta Kupong</button></a>
-						</div><!-- .flex -->
-						
-						<div class="flex product-box">
-							<div class="info">
-								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
-								<h4>Proovi 2 kuud põhipaketti</h4>
-								<h5>- 50%</h5>
-								<div class="valid">
-									<p>Kehtib kuni: 01.05.2017</p>
-								</div>
-							</div>
-							<a href="#" target="_blank"><button>Osta Kupong</button></a>
-						</div><!-- .flex -->
-						
-						<div class="flex product-box">
-							<div class="info">
-								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
-								<h4>Proovi 2 kuud põhipaketti</h4>
-								<h5>- 80%</h5>
-								<div class="valid">
-									<p>Kehtib kuni: 01.05.2017</p>
-								</div>
-							</div>
-							<a href="#" target="_blank"><button>Osta Kupong</button></a>
-						</div><!-- .flex -->
+
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+
 					</div><!-- vouchers -->
 					</div><!-- package-wrap -->
-					
+
 					<div class="package-wrap">
 						<div class="title">
 							<h3>Basic package</h3>
@@ -124,7 +94,7 @@ get_header(); ?>
 							</div>
 							<a href="#" target="_blank"><button>Osta Kupong</button></a>
 						</div><!-- .flex -->
-						
+
 						<div class="flex product-box">
 							<div class="info">
 								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
@@ -136,7 +106,7 @@ get_header(); ?>
 							</div>
 							<a href="#" target="_blank"><button>Osta Kupong</button></a>
 						</div><!-- .flex -->
-						
+
 						<div class="flex product-box">
 							<div class="info">
 								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
@@ -148,7 +118,7 @@ get_header(); ?>
 							</div>
 							<a href="#" target="_blank"><button>Osta Kupong</button></a>
 						</div><!-- .flex -->
-						
+
 						<div class="flex product-box">
 							<div class="info">
 								<img src="<?php bloginfo('template_directory'); ?>/img/viaplay_icon.svg">
@@ -162,7 +132,7 @@ get_header(); ?>
 						</div><!-- .flex -->
 					</div><!-- vouchers -->
 					</div><!-- package-wrap -->
-					
+
 					<div id="ostujuhis" class="guide">
 					<div class="guide-inner">
 						<div class="guide-title">
@@ -185,7 +155,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div><!-- guide -->
-				
+
 				<div class="payment">
 					<div class="title">
 						<h3>Makseviisid</h3>
@@ -209,7 +179,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div><!-- payment -->
-				
+
 				</div><!-- shop-module -->
 			</div><!-- container -->
 		</div><!-- #shop -->
@@ -226,11 +196,11 @@ $(function(){
         var imgID = $img.attr('id');
         var imgClass = $img.attr('class');
         var imgURL = $img.attr('src');
-    
+
         jQuery.get(imgURL, function(data) {
             // Get the SVG tag, ignore the rest
             var $svg = jQuery(data).find('svg');
-    
+
             // Add replaced image's ID to the new SVG
             if(typeof imgID !== 'undefined') {
                 $svg = $svg.attr('id', imgID);
@@ -239,20 +209,20 @@ $(function(){
             if(typeof imgClass !== 'undefined') {
                 $svg = $svg.attr('class', imgClass+' replaced-svg');
             }
-    
+
             // Remove any invalid XML tags as per http://validator.w3.org
             $svg = $svg.removeAttr('xmlns:a');
-            
+
             // Check if the viewport is set, else we gonna set it if we can.
             if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
                 $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
             }
-    
+
             // Replace image with new SVG
             $img.replaceWith($svg);
-    
+
         }, 'xml');
-    
+
     });
 });
 </script>
@@ -310,14 +280,14 @@ pauseButton.addEventListener("click", function() {
 playButton.addEventListener("click", function() {
  document.getElementById('thumbnail').style.display = 'none';
  document.getElementById('buttons').style.display = 'none';
- $('#play-button').hide(0);	
- $('#pause-button').show(0);	
+ $('#play-button').hide(0);
+ $('#pause-button').show(0);
 });
 pauseButton.addEventListener("click", function() {
   document.getElementById('thumbnail').style.display = 'block';
    document.getElementById('buttons').style.display = 'block';
-   $('#play-button').show(0);	
-   $('#pause-button').hide(0);	
+   $('#play-button').show(0);
+   $('#pause-button').hide(0);
 });
   </script>
 <?php

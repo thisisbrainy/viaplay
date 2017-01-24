@@ -141,9 +141,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page();
-	
+
 }
 /* remove paragraph from ACF */
 remove_filter ('acf_the_content', 'wpautop');
@@ -160,7 +160,7 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-  
+
 function custom_override_checkout_fields( $fields ) {
 
     unset($fields['billing']['billing_first_name']);
@@ -178,6 +178,10 @@ function custom_override_checkout_fields( $fields ) {
     unset($fields['account']['account_username']);
     unset($fields['account']['account_password']);
     unset($fields['account']['account_password-2']);
- 
+
     return $fields;
 }
+
+$via_products = new WP_Query([
+	'post_type' => 'product'
+]);

@@ -1,5 +1,5 @@
 <?php
-	
+
 /* Template name: Checkout */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 			</div><!-- shop head -->
 			<div class="checkout-title">
 				<h3>Valitud pakett: Viaplay põhipakett -50%</h3>
-				<a href="#"><span class="ion-close"></span><span>Eemalda valitud kupong</span></a>
+				<a href="#"><span class="ion-close"></span><span>Eemalda valitud kupong</span></a> 
 				<h2>Kehtib kuni: 05.01.2017</h2>
 			</div><!-- checkout title -->
 			<div class="checkout flexing">
@@ -45,7 +45,7 @@ get_header(); ?>
     				</p>
 				</div>
 			</div><!-- checkout -->
-			
+
 			<div id="ostujuhis" class="guide">
 					<div class="guide-inner">
 						<div class="guide-title">
